@@ -67,6 +67,15 @@ if (topLeft && topLeft === topMiddle && topLeft === topRight){
 
 //event handlers
 
+const resetGame = () => {
+    xIsNext=true;
+    statusDiv.innerHTML='X IS NEXT';
+    for(const cellDiv of cellDivs){
+        cellDiv.classList.remove('x');
+        cellDiv.classList.remove('o');
+        winner=null;
+    }
+};
 
 const handleCellClick = (e) => {
     const classList = e.target.classList;
@@ -88,6 +97,7 @@ const handleCellClick = (e) => {
 
 //event listeners
 
+resetDiv.addEventListener('click', resetGame);
 
 //loop through each of elements within cell div 
 for (const cellDiv of cellDivs) {
