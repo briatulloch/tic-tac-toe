@@ -81,7 +81,7 @@ const handleCellClick = (e) => {
     const classList = e.target.classList;
     
     //if space already contains an 'x' or 'o', do not want do anything (so it can't be switched) 
-    if (classList[1] === 'x' || classList[1] === 'o') {
+    if (classList[2] === 'x' || classList[2] === 'o') {
         return;
     }
 
